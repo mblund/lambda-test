@@ -1,8 +1,4 @@
-import scala.util.Try
-
-import com.github.plokhotnyuk.jsoniter_scala.core._
-import com.github.plokhotnyuk.jsoniter_scala.macros._
-
+import play.api.libs.json.Json
 
 case class RequestIdentity(
   apiKey: Option[String],
@@ -44,12 +40,17 @@ case class RequestEvent(
 )
 
 object RequestEvent {
-  private implicit val codec: JsonValueCodec[RequestEvent] = JsonCodecMaker.make[RequestEvent](CodecMakerConfig)
+  import play.api.libs.json._
 
-  def fromJsonSafe(s: String): Option[RequestEvent] = Try(readFromString[RequestEvent](s)) match {
-    case util.Success(re) => Some(re)
-    case util.Failure(ex) => Console.err.println(s"Failed to parse body into RequestEvent: $ex \nbody: $s"); None
+  private implicit val requestIdentityReads = Json.reads[RequestIdentity]
+  private implicit val requestContextReads = Json.reads[RequestContext]
+  private implicit val requestEventReads = Json.reads[RequestEvent]
+
+  def fromJsonSafe(s: String): Option[RequestEvent] = {
+    val json = Json.parse(s)
+    Json.fromJson[RequestEvent](json).asOpt
   }
+
 }
 
 // The response written to the response url by the function
@@ -59,9 +60,10 @@ case class LambdaResponse(
   body: String,
   isBase64Encoded: Boolean = false
 ) {
-  private implicit val codec: JsonValueCodec[LambdaResponse] = JsonCodecMaker.make[LambdaResponse](CodecMakerConfig)
 
-  def toJson: String = writeToString(this)
+  private implicit val requestIdentityReads = Json.writes[LambdaResponse]
+
+  def toJson: String = Json.toJson(this).toString()
 }
 
 
