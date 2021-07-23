@@ -33,7 +33,7 @@ object bootstrap {
       None
     }
   }
-  
+
   // Handle a valid request to this function
   def handleRequest(host: String, requestEvent: RequestEvent, requestId: String, deadlineMs: Long): Int = {
     requestEvent.pathParameters.flatMap(_.get("name")) match {

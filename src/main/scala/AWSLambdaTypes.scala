@@ -1,4 +1,4 @@
-import play.api.libs.json.Json
+import play.api.libs.json.{Json, OWrites}
 
 case class RequestIdentity(
   apiKey: Option[String],
@@ -42,9 +42,9 @@ case class RequestEvent(
 object RequestEvent {
   import play.api.libs.json._
 
-  private implicit val requestIdentityReads = Json.reads[RequestIdentity]
-  private implicit val requestContextReads = Json.reads[RequestContext]
-  private implicit val requestEventReads = Json.reads[RequestEvent]
+  private implicit val requestIdentityReads: Reads[RequestIdentity] = Json.reads[RequestIdentity]
+  private implicit val requestContextReads: Reads[RequestContext] = Json.reads[RequestContext]
+  private implicit val requestEventReads: Reads[RequestEvent] = Json.reads[RequestEvent]
 
   def fromJsonSafe(s: String): Option[RequestEvent] = {
     val json = Json.parse(s)
@@ -61,7 +61,7 @@ case class LambdaResponse(
   isBase64Encoded: Boolean = false
 ) {
 
-  private implicit val requestIdentityReads = Json.writes[LambdaResponse]
+  private implicit val requestIdentityReads: OWrites[LambdaResponse] = Json.writes[LambdaResponse]
 
   def toJson: String = Json.toJson(this).toString()
 }
