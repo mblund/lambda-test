@@ -1,6 +1,6 @@
 
 name := "graalvm-scala-lambda"
-scalaVersion := "2.13.6"
+scalaVersion := "3.0.1"
 assembly / assemblyJarName := "graalvm-scala-lambda.jar"
 assembly / mainClass := Some("bootstrap")
 assembly / assemblyMergeStrategy := AssemblyStrategy.all

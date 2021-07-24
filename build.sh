@@ -6,5 +6,5 @@ set -e
 mkdir -p dist
 sbt clean assembly
 docker build -f linuxbuild.dockerfile -t linuxbuild .
-docker run -v "$(pwd -P)/target/scala-2.13":/tmp/target -v "$(pwd -P)/dist":/tmp/dist linuxbuild
+docker run -v "$(pwd -P)/target/scala-3.0.1":/tmp/target -v "$(pwd -P)/dist":/tmp/dist linuxbuild
 
