@@ -1,0 +1,176 @@
+[
+  {
+    "name":"java.lang.invoke.VarHandle",
+    "methods":[{"name":"releaseFence","parameterTypes":[] }]
+  },
+  {
+    "name":"requests.Requester$",
+    "fields":[{"name":"0bitmap$1"}]
+  },
+  {
+    "name":"requests.package$",
+    "fields":[{"name":"0bitmap$1"}]
+  },
+  {
+    "name":"sun.misc.Unsafe",
+    "allDeclaredFields":true
+  },
+  {
+    "name": "java.lang.Thread",
+    "fields": [
+      {
+        "name": "parkBlocker",
+        "allowUnsafeAccess": true
+      }
+    ]
+  },
+  {
+    "name": "scala.Tuple2[]"
+  },
+  {
+    "name": "scala.util.Either[]"
+  },
+  {
+    "name": "sun.misc.Unsafe",
+    "allDeclaredFields": true
+  },
+  {
+    "name":"RequestEvent$$anon$1",
+    "fields":[{"name":"0bitmap$1"}]
+  },
+  {
+    "name":"RequestEvent$$anon$2",
+    "fields":[{"name":"0bitmap$2"}]
+  },
+  {
+    "name":"RequestEvent$$anon$3",
+    "fields":[{"name":"0bitmap$3"}]
+  },
+  {
+    "name":"com.fasterxml.jackson.databind.deser.Deserializers[]"
+  },
+  {
+    "name":"com.fasterxml.jackson.databind.ext.Java7SupportImpl",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"com.fasterxml.jackson.databind.ser.Serializers[]"
+  },
+  {
+    "name":"java.lang.invoke.VarHandle",
+    "methods":[{"name":"releaseFence","parameterTypes":[] }]
+  },
+  {
+    "name":"play.api.libs.json.JsObject",
+    "allDeclaredFields":true
+  },
+  {
+    "name":"play.api.libs.json.JsPath",
+    "allDeclaredFields":true
+  },
+  {
+    "name":"play.api.libs.json.JsonValidationError",
+    "allDeclaredFields":true
+  },
+  {
+    "name":"play.api.libs.json.Reads$",
+    "allDeclaredFields":true
+  },
+  {
+    "name":"play.api.libs.json.Writes$",
+    "allDeclaredFields":true
+  },
+  {
+    "name":"play.api.libs.json.jackson.JacksonJson$",
+    "allDeclaredFields":true
+  },
+  {
+    "name":"sun.misc.Unsafe",
+    "allDeclaredFields":true
+  },
+  {
+    "name":"LambdaResponse$$anon$1",
+    "fields":[{"name":"0bitmap$4"}]
+  },
+  {
+    "name":"MySuite",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"RequestEvent$$anon$1",
+    "fields":[{"name":"0bitmap$1"}]
+  },
+  {
+    "name":"RequestEvent$$anon$2",
+    "fields":[{"name":"0bitmap$2"}]
+  },
+  {
+    "name":"RequestEvent$$anon$3",
+    "fields":[{"name":"0bitmap$3"}]
+  },
+  {
+    "name":"com.fasterxml.jackson.databind.deser.Deserializers[]"
+  },
+  {
+    "name":"com.fasterxml.jackson.databind.ext.Java7SupportImpl",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"com.fasterxml.jackson.databind.ser.Serializers[]"
+  },
+  {
+    "name":"java.lang.annotation.Annotation[]"
+  },
+  {
+    "name":"java.lang.invoke.VarHandle",
+    "methods":[{"name":"releaseFence","parameterTypes":[] }]
+  },
+  {
+    "name":"java.security.MessageDigestSpi"
+  },
+  {
+    "name":"munit.Framework",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"munit.MUnitRunner",
+    "fields":[{"name":"0bitmap$1"}],
+    "methods":[{"name":"<init>","parameterTypes":["java.lang.Class"] }]
+  },
+  {
+    "name":"munit.Suite"
+  },
+  {
+    "name":"play.api.libs.json.JsObject",
+    "fields":[{"name":"0bitmap$1"}]
+  },
+  {
+    "name":"play.api.libs.json.JsPath",
+    "fields":[{"name":"0bitmap$1"}]
+  },
+  {
+    "name":"play.api.libs.json.JsonValidationError",
+    "fields":[{"name":"0bitmap$1"}]
+  },
+  {
+    "name":"play.api.libs.json.Reads$",
+    "fields":[{"name":"0bitmap$1"}]
+  },
+  {
+    "name":"play.api.libs.json.Writes$",
+    "fields":[{"name":"0bitmap$1"}]
+  },
+  {
+    "name":"play.api.libs.json.jackson.JacksonJson$",
+    "fields":[{"name":"0bitmap$1"}]
+  },
+  {
+    "name":"sun.misc.Unsafe",
+    "allDeclaredFields":true
+  },
+  {
+    "name":"sun.security.provider.SHA",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  }
+
+]
